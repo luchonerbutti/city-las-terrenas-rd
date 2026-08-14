@@ -3,14 +3,16 @@ IMÁGENES QUE DEBES REEMPLAZAR EN LA CARPETA /assets/
 Ahora mismo son placeholders de colores. Sube TUS fotos con
 EXACTAMENTE estos nombres (respeta el nombre o no cargarán):
 
-1. hero-atardecer.jpg    → Foto del atardecer con el edificio (la del Hero "Frente al mar")
-2. edificio-nocturno.jpg → Render del edificio iluminado de noche (sección "Nueva promoción")
-3. render-aereo.jpg      → Vista aérea del complejo con palmeras (sección de cierre)
-4. mapa-ubicacion.jpg    → El mapa de ubicación del proyecto
-5. logo-city.png         → El logo circular CITY (fondo transparente, PNG)
-6. og-city.jpg           → Imagen para compartir en redes (usa el atardecer, 1200x630px)
-7. favicon-32x32.png     → Favicon pequeño (el logo)
-8. favicon-180x180.png   → Favicon para móvil (el logo)
+1. hero-atardecer.jpg    → Atardecer con el edificio (Hero "Frente al mar")   [1920px ancho]
+2. edificio-nocturno.jpg → Edificio iluminado de noche (sección promoción)    [1920px ancho]
+3. render-aereo.jpg      → Vista aérea del complejo (sección de cierre)        [1920px ancho]
+4. mapa-ubicacion.jpg    → El mapa de ubicación del proyecto                   [1200px ancho]
+5. logo-city.png         → Logo circular CITY (fondo transparente, PNG)        [400px]
+6. og-city.jpg           → Para compartir en redes (usa el atardecer)          [1200x630px]
+7. favicon-32x32.png     → Favicon pequeño (el logo)                           [32x32px]
+8. favicon-180x180.png   → Favicon móvil (el logo)                             [180x180px]
 
-CONSEJO: exporta las fotos grandes (hero, aéreo, nocturno) a máx 1920px
-de ancho y comprímelas (tinypng.com) para que la web cargue rápido.
+IMPORTANTE:
+- Comprime las fotos grandes en tinypng.com ANTES de subir (bajan de 5MB a ~400KB).
+- Las fotos las descargas de tu WordPress viejo: citylasterrenasrd.com/wp-admin -> Medios.
+- Súbelas en GitHub: repo city-las-terrenas-rd -> carpeta assets -> Add file -> Upload files.
