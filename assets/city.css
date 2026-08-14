@@ -257,3 +257,48 @@ a{color:inherit}
   .cookie-actions{ justify-content:stretch; }
   .cookie-btn{ flex:1; }
 }
+
+/* ===== VÍDEO ===== */
+.video-wrap{position:relative;width:100%;max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ===== PARALLAX (fondo fijo) ===== */
+.parallax{
+  position:relative;
+  min-height:70vh;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  overflow:hidden;
+}
+.parallax-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.55),rgba(13,27,42,.35));z-index:1}
+.parallax-content{position:relative;z-index:2;padding:2rem 1.5rem;max-width:900px}
+.parallax-eyebrow{font-size:clamp(.9rem,2vw,1.15rem);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright,#e6c987);font-weight:600;margin-bottom:1rem}
+.parallax-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,5.5vw,4rem);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.5);margin:0;line-height:1.1}
+/* iOS/móvil: background-attachment:fixed falla → lo desactivamos */
+@media (max-width:900px){
+  .parallax{background-attachment:scroll;min-height:56vh}
+}
+
+/* ===== COLUMNAS TEXTO / IMAGEN ===== */
+.split-col{
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;
+  max-width:1200px;margin:0 auto;
+}
+.split-col + .split-col{margin-top:0}
+.split-text{padding:clamp(2rem,5vw,4.5rem)}
+.split-text .eyebrow{margin-bottom:1.2rem}
+.split-text p{margin:0 0 1rem;line-height:1.7}
+.split-text-dark{color:#0d1b2a}
+.split-text-dark .eyebrow{color:var(--gold,#c9a668)}
+.split-img{align-self:stretch;min-height:100%}
+.split-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:340px}
+.split-col-reverse .split-img{order:-1}
+@media (max-width:800px){
+  .split-col{grid-template-columns:1fr}
+  .split-col-reverse .split-img{order:0}
+  .split-img img{min-height:260px}
+}
+
+/* ===== VÍDEO ===== */
