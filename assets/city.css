@@ -11,8 +11,8 @@
   --ink-soft:#5a5142;
   --teal:#4a9d9c;
   --red:#b8402f;
-  --muted:rgba(245,243,238,.72);
-  --muted-dark:rgba(42,36,25,.72);
+  --muted:rgba(245,243,238,.85);
+  --muted-dark:rgba(42,36,25,.8);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -21,6 +21,8 @@ body{
   background:var(--navy);
   color:var(--bone);
   line-height:1.7;
+  font-weight:400;
+  font-size:1.02rem;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
@@ -29,7 +31,7 @@ body{
   text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;
 }
 h1,h2,.section-title-center,.col-title,.cierre-title,.promo-title,.manifiesto-title,.tipo-a-label,.confotur-line,.intro-lead,.fiscal-lead,.cierre-lead{
-  font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.12;letter-spacing:.01em;
+  font-family:'Playfair Display',serif;font-weight:700;line-height:1.14;letter-spacing:.005em;
 }
 em{font-style:italic;color:var(--gold)}
 strong{font-weight:600}
@@ -59,25 +61,25 @@ a{color:inherit}
 .hero-media{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.35) 0%,rgba(60,40,25,.25) 45%,rgba(13,27,42,.8) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;max-width:920px;padding:2rem 1.5rem}
-.hero-eyebrow{font-size:.95rem;letter-spacing:.38em;text-transform:uppercase;color:var(--bone);font-weight:300;margin-bottom:.8rem}
-.hero-title{font-size:clamp(3.5rem,11vw,8.5rem);text-transform:uppercase;letter-spacing:.02em;text-shadow:0 4px 40px rgba(0,0,0,.5);margin-bottom:1.6rem}
-.hero-banner{display:inline-block;background:var(--red);color:#fff;font-weight:600;font-size:clamp(.72rem,1.9vw,.95rem);letter-spacing:.09em;padding:11px 26px;margin-bottom:1.8rem}
-.hero-price{font-size:clamp(1.4rem,4vw,2.3rem);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.8rem}
+.hero-eyebrow{font-size:clamp(1.1rem,2.4vw,1.7rem);letter-spacing:.34em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-bottom:1.2rem}
+.hero-title{font-size:clamp(3rem,9vw,7.5rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 4px 40px rgba(0,0,0,.5);margin-bottom:1.6rem;white-space:nowrap}
+.hero-banner{position:absolute;top:0;left:0;right:0;background:var(--red);color:#fff;font-weight:700;font-size:clamp(.85rem,2vw,1.2rem);letter-spacing:.08em;padding:18px 26px;text-align:center;z-index:3}
+.hero-price{font-size:clamp(1.3rem,3.5vw,2.3rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2rem;white-space:nowrap}
 .hero-price strong{color:var(--gold-bright)}
-.hero-features{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 2rem;margin-bottom:2.6rem;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.hero-features li::before{content:"·";margin-right:.6rem;color:var(--gold)}
+.hero-features{list-style:none;display:flex;flex-direction:column;align-items:center;gap:.7rem;margin-bottom:2.8rem;font-size:clamp(.95rem,1.8vw,1.15rem);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
+.hero-features li::before{content:"·";margin-right:.6rem;color:var(--gold-bright)}
 
 /* FRANJA CONFIANZA */
-.trust-bar{background:var(--navy-soft);border-top:1px solid rgba(201,166,104,.2);border-bottom:1px solid rgba(201,166,104,.2);padding:1.6rem 1.5rem}
-.trust-inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem 2.5rem;text-align:center}
-.trust-item{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.trust-bar{background:var(--navy-soft);border-top:1px solid rgba(201,166,104,.25);border-bottom:1px solid rgba(201,166,104,.25);padding:2rem 1.5rem}
+.trust-inner{max-width:1300px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:1rem 2rem;text-align:center}
+.trust-item{font-size:clamp(.85rem,1.5vw,1.05rem);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--bone)}
 .trust-item strong{color:var(--gold-bright);font-weight:600}
 .trust-sep{color:var(--gold-deep);opacity:.5}
 
 /* SECCIONES BASE */
 .section{padding:6.5rem 1.5rem}
 .section-inner{max-width:1080px;margin:0 auto}
-.section-title-center{font-size:clamp(2.2rem,5.5vw,3.4rem);text-align:center;margin-bottom:2.5rem}
+.section-title-center{font-size:clamp(2.4rem,5.5vw,3.6rem);font-weight:700;text-align:center;margin-bottom:2.5rem}
 .section p{margin-bottom:1.1rem}
 
 /* TEMA OSCURO / CLARO */
@@ -95,9 +97,9 @@ a{color:inherit}
 
 /* INTRO */
 .section-intro{text-align:center}
-.section-intro .section-inner{max-width:720px}
-.intro-lead{font-size:clamp(1.7rem,4vw,2.5rem);color:var(--gold-deep);margin-bottom:1.5rem}
-.intro-body{font-size:1.2rem}
+.section-intro .section-inner{max-width:1000px}
+.intro-lead{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--gold-deep);margin-bottom:1.8rem}
+.intro-body{font-size:clamp(1.2rem,2.2vw,1.5rem);line-height:1.6}
 
 /* SOBRE */
 .barra-vertical{position:relative;padding-left:2.5rem;max-width:720px}
@@ -185,6 +187,9 @@ a{color:inherit}
 /* RESPONSIVE */
 @media(max-width:768px){
   .section{padding:4.5rem 1.3rem}
+  .hero-title{white-space:normal;font-size:clamp(3rem,15vw,5rem)}
+  .hero-price{white-space:normal}
+  .hero{padding-top:70px}
   .dos-col{grid-template-columns:1fr;gap:2.5rem}
   .footer-inner{grid-template-columns:1fr;gap:2rem;text-align:center;justify-items:center}
   .promo-card{padding:2.2rem}
