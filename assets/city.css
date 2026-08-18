@@ -10,7 +10,7 @@
   --ink:#2a2419;
   --ink-soft:#5a5142;
   --teal:#4a9d9c;
-  --red:#e63525;
+  --red:#ff3b1d;
   --muted:rgba(245,243,238,.85);
   --muted-dark:rgba(42,36,25,.8);
 }
@@ -43,17 +43,19 @@ a{color:inherit}
 .btn-primary .btn-dot{position:absolute;left:22px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#00ff88;animation:pulse 1.8s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,255,136,.5)}70%{box-shadow:0 0 0 11px rgba(0,255,136,0)}100%{box-shadow:0 0 0 0 rgba(0,255,136,0)}}
 .btn-primary:hover{background:#1a1a1a;transform:translateY(-2px);border-color:var(--gold-bright)}
-.btn-gold{background:var(--gold);color:var(--navy);font-weight:600}
+.btn-gold{background:#0a0a0a;color:var(--bone);position:relative;padding-left:46px;border:1px solid rgba(224,193,132,.5)}
+.btn-gold .btn-dot{position:absolute;left:22px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#00ff88;animation:pulse 1.8s infinite}
 .btn-gold .arrow{transition:transform .3s ease}
-.btn-gold:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.btn-gold:hover{background:#1a1a1a;transform:translateY(-2px);border-color:var(--gold-bright)}
 .btn-gold:hover .arrow{transform:translateX(6px)}
 .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--gold-deep);font-weight:500}
 .btn-outline .arrow{transition:transform .3s ease}
 .btn-outline:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px)}
 .btn-outline:hover .arrow{transform:translateX(6px)}
-.btn-close{background:var(--gold);color:var(--navy);font-weight:600;font-size:1.05rem;padding:20px 44px}
+.btn-close{background:#0a0a0a;color:var(--bone);position:relative;font-size:1.05rem;padding:20px 44px 20px 52px;border:1px solid rgba(224,193,132,.5)}
+.btn-close .btn-dot{position:absolute;left:26px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#00ff88;animation:pulse 1.8s infinite}
 .btn-close .arrow{transition:transform .3s ease}
-.btn-close:hover{background:var(--gold-bright);transform:translateY(-2px)}
+.btn-close:hover{background:#1a1a1a;transform:translateY(-2px);border-color:var(--gold-bright)}
 .btn-close:hover .arrow{transform:translateX(6px)}
 
 /* HERO */
@@ -61,7 +63,7 @@ a{color:inherit}
 .hero-media{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.12) 0%,rgba(13,27,42,.05) 45%,rgba(13,27,42,.45) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;max-width:920px;padding:2rem 1.5rem}
-.hero-eyebrow{font-size:clamp(1.1rem,2.4vw,1.7rem);letter-spacing:.34em;text-transform:uppercase;color:var(--gold-bright);font-weight:600;margin-bottom:1.2rem;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.hero-eyebrow{font-size:clamp(1.1rem,2.4vw,1.7rem);letter-spacing:.34em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:1.2rem;text-shadow:0 2px 8px rgba(0,0,0,.9),0 4px 24px rgba(0,0,0,.9)}
 .hero-title{font-size:clamp(3rem,9vw,7.5rem);font-weight:900;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 3px 12px rgba(0,0,0,.7),0 8px 40px rgba(0,0,0,.85);margin-bottom:1.6rem;white-space:nowrap}
 .hero-banner{position:absolute;top:0;left:0;right:0;background:var(--red);color:#fff;font-weight:700;font-size:clamp(.85rem,2vw,1.2rem);letter-spacing:.08em;padding:18px 26px;text-align:center;z-index:3}
 .hero-price{font-size:clamp(1.3rem,3.5vw,2.3rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2rem;white-space:nowrap;text-shadow:0 2px 14px rgba(0,0,0,.8)}
@@ -124,8 +126,8 @@ a{color:inherit}
 .amenidades li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-deep);margin-right:1rem;flex-shrink:0}
 
 /* MAPA */
-.section-ubicacion{text-align:center;background:#000;padding:3.5rem 0 0}
-.ubicacion-title{color:#fff;margin-bottom:2.5rem}
+.section-ubicacion{text-align:center;background:#000;padding:2rem 0 0}
+.ubicacion-title{color:#fff;margin-bottom:1rem;font-size:clamp(1.8rem,3.5vw,2.6rem)}
 .mapa-wrap{max-width:100%;margin:0;overflow:hidden}
 .mapa-wrap img{width:100%;display:block}
 
@@ -151,7 +153,7 @@ a{color:inherit}
 .section-fiscal .promo-tag{margin-bottom:2rem}
 .fiscal-lead{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.2vw,2.4rem);margin:1rem 0 2.4rem}
 .fiscal-lead strong{color:var(--gold-bright)}
-.fiscal-highlight{font-size:clamp(1.5rem,2.6vw,2rem)!important;color:var(--gold-bright)!important;margin:2.6rem 0!important;line-height:1.3}
+.fiscal-highlight{font-size:clamp(1.6rem,2.8vw,2.2rem)!important;color:var(--gold-bright)!important;margin:2.6rem auto!important;line-height:1.3;padding-bottom:1.6rem;border-bottom:1px solid rgba(224,193,132,.25);max-width:560px}
 .fiscal-ctx{color:rgba(245,243,238,.6);font-size:1.02rem;margin-bottom:1.6rem}
 
 /* TIPO A */
@@ -174,8 +176,8 @@ a{color:inherit}
 /* Párrafos de contexto: atenuados */
 .section-rentabilidad .rent-intro{color:rgba(245,243,238,.62);font-size:1.02rem}
 /* Dato estrella: grande, dorado, protagonista */
-.section-rentabilidad .rent-star{margin:2.6rem 0 .6rem}
-.section-rentabilidad .rent-star strong{color:var(--gold-bright);font-size:clamp(1.5rem,2.6vw,2rem);font-weight:700;line-height:1.3;display:block}
+.section-rentabilidad .rent-star{margin:3rem 0 1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(224,193,132,.25)}
+.section-rentabilidad .rent-star strong{color:var(--gold-bright);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;line-height:1.3;display:block}
 /* Reparto y detalles: cuerpo normal, algo más presente */
 .section-rentabilidad .rent-split{margin-top:2.4rem}
 .section-rentabilidad .rent-split strong{color:var(--gold-bright)}
@@ -195,6 +197,9 @@ a{color:inherit}
 .cierre-lead{font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--gold-bright);margin-bottom:2rem;text-shadow:0 2px 14px rgba(0,0,0,.8)}
 .cierre-content p{color:rgba(245,243,238,.88);text-shadow:0 1px 10px rgba(0,0,0,.8)}
 .cierre-content p strong{color:#fff}
+.cierre-p1{font-size:1.15rem;color:#fff!important;margin-bottom:1.2rem;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+.cierre-p2{color:rgba(245,243,238,.75)!important;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+.cierre-cta{margin-top:2.4rem}
 
 /* FOOTER */
 .site-footer{background:#fff;padding:4.5rem 1.5rem 2rem;border-top:1px solid #ece7dc}
@@ -293,9 +298,8 @@ a{color:inherit}
 }
 
 /* ===== VÍDEO ===== */
-.section-video{padding:2.5rem 1rem}
-.section-video .section-title-center{margin-bottom:1.5rem}
-.video-wrap{position:relative;width:100%;max-width:1400px;margin:0 auto;aspect-ratio:16/9;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.section-video{padding:1rem 0.5rem}
+.video-wrap{position:relative;width:100%;max-width:1600px;margin:0 auto;aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* ===== PARALLAX (fondo fijo) ===== */
@@ -309,9 +313,10 @@ a{color:inherit}
   overflow:hidden;
 }
 .parallax-overlay{position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at center,rgba(13,27,42,.55) 0%,rgba(13,27,42,.3) 45%,rgba(13,27,42,0) 80%);z-index:1}
-.parallax-content{position:relative;z-index:2;padding:2rem 1.5rem;max-width:900px}
+.parallax-content{position:relative;z-index:2;padding:2rem 1.5rem;max-width:1200px}
 .parallax-eyebrow{font-size:clamp(.9rem,2vw,1.15rem);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright,#e6c987);font-weight:600;margin-bottom:1rem;text-shadow:0 2px 14px rgba(0,0,0,.9)}
-.parallax-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,5.5vw,4rem);color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.85),0 6px 40px rgba(0,0,0,.9);margin:0;line-height:1.1}
+.parallax-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.6rem);color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.85),0 6px 40px rgba(0,0,0,.9);margin:0;line-height:1.1;white-space:nowrap}
+@media(max-width:700px){.parallax-title{white-space:normal}}
 /* iOS/móvil: background-attachment:fixed falla → lo desactivamos */
 @media (max-width:900px){
   .parallax{background-attachment:scroll;min-height:56vh}
