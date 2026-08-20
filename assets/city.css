@@ -129,8 +129,9 @@ a{color:inherit}
 .amenidades li::before{content:"·";color:var(--gold-deep);margin-right:.8rem}
 
 /* MAPA */
-.section-ubicacion{text-align:center;background:var(--navy);padding:6.5rem 1.5rem}
-.mapa-wrap{max-width:1080px;margin:0 auto;border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.7);background:var(--navy)}
+.section-ubicacion{text-align:center;background:#000;padding:4rem 0.5rem 0}
+.ubicacion-title{color:var(--bone);margin-bottom:2rem}
+.mapa-wrap{max-width:1080px;margin:0 auto;overflow:hidden;background:#000}
 .mapa-wrap img{width:100%;display:block}
 
 /* PROMO */
@@ -184,9 +185,10 @@ a{color:inherit}
 .cierre-lead{font-size:1.6rem;color:var(--gold-bright);margin-bottom:1.5rem}
 .cierre-content p{color:var(--muted)}
 .cierre-content p strong{color:var(--bone)}
+.cierre-cta{margin-top:2.8rem!important}
 
 /* FOOTER */
-.site-footer{background:var(--bone);padding:5rem 1.5rem 2rem;color:var(--ink)}
+.site-footer{background:#ffffff;padding:5rem 1.5rem 2rem;color:var(--ink)}
 .footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:center}
 .footer-logo img{width:190px;max-width:100%}
 .footer-datos p{margin-bottom:.6rem;color:var(--ink-soft)}
@@ -312,7 +314,7 @@ a{color:inherit}
 }
 .parallax-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,42,.05),rgba(13,27,42,.2));z-index:1}
 .parallax-content{position:relative;z-index:2;padding:2rem 1.5rem;max-width:900px}
-.parallax-eyebrow{font-size:clamp(.9rem,2vw,1.15rem);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright,#e6c987);font-weight:600;margin-bottom:1rem;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.parallax-eyebrow{font-size:clamp(.9rem,2vw,1.15rem);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright,#e6c987);font-weight:700;margin-bottom:1rem;text-shadow:0 2px 4px rgba(0,0,0,.9),0 4px 20px rgba(0,0,0,.8)}
 .parallax-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,5.5vw,4rem);color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6),0 6px 34px rgba(0,0,0,.7);margin:0;line-height:1.1}
 /* iOS/móvil: background-attachment:fixed falla → lo desactivamos */
 @media (max-width:900px){
@@ -355,7 +357,7 @@ a{color:inherit}
 
 /* ===== MASTER PLAN (imagen completa) ===== */
 .masterplan-inner{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
-.masterplan-text .eyebrow{color:var(--gold-bright,#e6c987);margin-bottom:1.2rem}
+.masterplan-text .eyebrow{color:var(--gold-deep);margin-bottom:1.2rem;font-size:1rem;letter-spacing:.22em;font-weight:700}
 .masterplan-text p{line-height:1.7;margin:0 0 1rem}
 .masterplan-text strong{color:var(--gold-bright,#e6c987)}
 .masterplan-img{width:100%;height:auto;border-radius:12px;display:block;background:#fff}
@@ -398,7 +400,7 @@ a{color:inherit}
 .section-fiscal{text-align:left}
 .section-fiscal .section-inner{max-width:1000px}
 .section-fiscal .fiscal-lead,.section-fiscal .promo-tag{text-align:center;display:block}
-.section-fiscal .promo-tag{width:fit-content;margin-left:auto;margin-right:auto}
+.section-fiscal .promo-tag{width:fit-content;margin-left:auto;margin-right:auto;font-size:.95rem;letter-spacing:.2em;padding:12px 28px}
 .fiscal-lead{font-size:1.7rem;margin:1.2rem 0 1.5rem;text-align:center}
 .fiscal-ctx{font-size:1.05rem;text-align:center;max-width:720px;margin:0 auto 2.5rem}
 .fiscal-grid{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:0 0 2rem}
@@ -421,6 +423,8 @@ a{color:inherit}
 
 /* ===== DOSSIER FORM ===== */
 .section-dossier .section-inner{max-width:640px}
+.section-dossier .section-title-center{white-space:nowrap}
+@media(max-width:600px){.section-dossier .section-title-center{white-space:normal}}
 .dossier-form{margin-top:2rem}
 .dossier-fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
 .dossier-fields input{font-family:'Inter',sans-serif;font-size:1rem;padding:14px 16px;border:1px solid var(--gold-deep);border-radius:3px;background:#fff;color:var(--ink);width:100%}
