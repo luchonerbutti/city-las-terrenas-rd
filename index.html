@@ -578,6 +578,19 @@
     msg.className = 'dossier-msg';
     msg.textContent = '';
     if (btn) btn.disabled = true;
+        /* Alta en paralelo en Brevo (lista de seguimiento por email).
+       No bloquea ni condiciona el envío a Formspree ni la descarga del PDF. */
+    try {
+      fetch('/api/subscribe-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: data.get('nombre'),
+          email: data.get('email'),
+          whatsapp: data.get('whatsapp')
+        })
+      }).catch(function () {});
+    } catch (e) {}
 
     fetch(ENDPOINT, {
       method: 'POST',
