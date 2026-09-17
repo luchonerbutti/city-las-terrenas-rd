@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (!form) return;
   var msg = document.getElementById('lead-msg');
   var PDF_URL = '/assets/dossier-city.pdf';
-  var ENDPOINT = 'https://formspree.io/f/xjybjznw';
+  var ENDPOINT = 'https://formspree.io/f/xljdeojd';
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
@@ -379,6 +379,21 @@ document.addEventListener("DOMContentLoaded", function() {
     msg.className = 'lead-msg';
     msg.textContent = '';
     if (btn) btn.disabled = true;
+
+    /* Alta en paralelo en Brevo, lista "City - Dossier Inversion" (ID 6) —
+       dispara la automatización de seguimiento a 2 días para este funnel.
+       No bloquea ni condiciona el envío a Formspree ni la descarga del dossier. */
+    try {
+      fetch('/api/subscribe-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: data.get('nombre'),
+          email: data.get('email'),
+          listId: 6
+        })
+      }).catch(function () {});
+    } catch (e) {}
 
     fetch(ENDPOINT, {
       method: 'POST',
