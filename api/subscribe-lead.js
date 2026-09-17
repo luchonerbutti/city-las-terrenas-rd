@@ -1,7 +1,10 @@
 // Puente City Las Terrenas -> Brevo
 // Recibe los mismos datos que el formulario de la web (nombre, email, whatsapp)
-// y da de alta/actualiza el contacto en Brevo, añadiéndolo a la lista "City - Dossier Web" (ID 3),
-// para que la automatización de seguimiento a 3 días se dispare sola.
+// y da de alta/actualiza el contacto en Brevo. Por defecto usa la lista
+// "City - Dossier Web" (ID 3, home), para que la automatización de seguimiento
+// a 2 días se dispare sola. La página de /inversion envía listId: 6 para dar
+// de alta en "City - Dossier Inversion" en su lugar (automatización propia,
+// también a 2 días).
 // No sustituye a Formspree: se llama en paralelo, sin bloquear la descarga del dossier.
 
 module.exports = async (req, res) => {
@@ -11,12 +14,14 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { nombre, email, whatsapp } = req.body || {};
+    const { nombre, email, whatsapp, listId } = req.body || {};
 
     if (!email) {
       res.status(400).json({ error: 'email required' });
       return;
     }
+
+    const targetListId = Number(listId) || 3;
 
     const attributes = {};
     if (nombre) attributes.FIRSTNAME = String(nombre).slice(0, 200);
@@ -32,7 +37,7 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         email,
         attributes,
-        listIds: [3],
+        listIds: [targetListId],
         updateEnabled: true
       })
     });
