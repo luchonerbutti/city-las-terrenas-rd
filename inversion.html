@@ -54,6 +54,10 @@
   .faq-item summary::after{content:'+';color:var(--gold-deep);font-size:1.4rem;flex-shrink:0}
   .faq-item[open] summary::after{content:'–'}
   .faq-item p{color:var(--ink-soft);margin-top:1rem;line-height:1.7;font-size:.98rem}
+
+  /* Botones de esta página: mismo texto en todos, en mayúscula, y el de envío centrado */
+  .landing-hero .btn,.mini-cta .btn,.calc-cta .btn,.lead-submit{text-transform:uppercase;letter-spacing:.04em}
+  .lead-submit{display:flex;justify-content:center}
 </style>
 </head>
 <body>
@@ -73,7 +77,7 @@
       <li>Ventajas fiscales CONFOTUR</li>
     </ul>
     <a class="btn btn-primary" href="#lead-form">
-      <span class="btn-dot"></span>Solicitar información <span class="arrow">→</span>
+      <span class="btn-dot"></span>Descargar dossier <span class="arrow">→</span>
     </a>
   </div>
 </header>
@@ -107,7 +111,7 @@
       </div>
     </div>
     <div class="mini-cta">
-      <a class="btn btn-gold" href="#lead-form"><span class="btn-dot"></span>Solicitar información <span class="arrow">→</span></a>
+      <a class="btn btn-gold" href="#lead-form"><span class="btn-dot"></span>Descargar dossier <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -134,7 +138,7 @@
     <p class="disclaimer-inline calc-disc">Simulación orientativa basada en una rentabilidad proyectada. No constituye una garantía de resultados.</p>
     <div class="calc-cta">
       <a class="btn btn-gold" href="#lead-form">
-        <span class="btn-dot"></span>Ver disponibilidad <span class="arrow">→</span>
+        <span class="btn-dot"></span>Descargar dossier <span class="arrow">→</span>
       </a>
     </div>
   </div>
@@ -183,7 +187,7 @@
       </details>
     </div>
     <div class="mini-cta">
-      <a class="btn btn-gold" href="#lead-form"><span class="btn-dot"></span>Resolver mis dudas con Lucho <span class="arrow">→</span></a>
+      <a class="btn btn-gold" href="#lead-form"><span class="btn-dot"></span>Descargar dossier <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -207,7 +211,7 @@
             <option value="no-decidido">Aún no lo tengo decidido</option>
           </select>
           <select name="cuando_compra" required>
-            <option value="" disabled selected>¿Cuándo te gustaría invertir?</option>
+            <option value="" disabled selected>¿Cuándo tienes pensado invertir?</option>
             <option value="inmediato">De forma inmediata</option>
             <option value="3-6-meses">En 3-6 meses</option>
             <option value="explorando">Explorando opciones</option>
@@ -218,6 +222,7 @@
         <button type="submit" class="btn btn-gold lead-submit">Descargar dossier</button>
         <p class="lead-msg" id="lead-msg"></p>
       </form>
+      <p class="lead-wa-secondary">¿Prefieres hablar directamente? <a href="https://wa.me/34646604591?text=Hola%20Lucho%2C%20he%20visto%20el%20proyecto%20de%20inversi%C3%B3n%20de%20City%20Las%20Terrenas%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20directamente." data-wa="lead" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
     </div>
 
     <div id="lead-confirm">
