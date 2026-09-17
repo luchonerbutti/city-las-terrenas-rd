@@ -27,7 +27,8 @@
   .inversion-hero .hero-title{font-size:clamp(2.4rem,7vw,5rem)}
   .mini-cta{text-align:center;padding:2.5rem 1.5rem 0}
   .inversion-reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1080px;margin:0 auto}
-  .inversion-reason{background:#fff;border:1px solid rgba(168,130,63,.25);border-radius:6px;padding:2rem 1.6rem;text-align:center;box-shadow:0 2px 10px rgba(42,36,25,.05)}
+  .inversion-reason{background:#fff;border:1px solid rgba(168,130,63,.25);border-radius:6px;padding:2rem 1.6rem;text-align:center;box-shadow:0 2px 10px rgba(42,36,25,.05);transition:opacity .6s ease,transform .3s ease,box-shadow .3s ease}
+  .inversion-reason:hover{box-shadow:0 8px 24px rgba(42,36,25,.1);transform:translateY(-4px)}
   .inversion-reason h3{font-family:'Playfair Display',serif;color:var(--gold-deep);font-size:1.3rem;margin-bottom:.8rem}
   .inversion-reason p{color:var(--ink-soft);font-size:.98rem;line-height:1.6}
   @media(max-width:800px){.inversion-reasons{grid-template-columns:1fr}}
@@ -48,12 +49,19 @@
   @media(max-width:560px){.lead-fields{grid-template-columns:1fr}}
 
   .faq-list{max-width:780px;margin:2.5rem auto 0}
-  .faq-item{border-bottom:1px solid rgba(168,130,63,.3);padding:1.2rem 0}
+  .faq-item{background:#fff;border:1px solid rgba(168,130,63,.18);border-radius:10px;padding:1.4rem 1.8rem;margin-bottom:1rem;box-shadow:0 2px 10px rgba(42,36,25,.05);transition:opacity .6s ease,transform .3s ease,box-shadow .3s ease}
+  .faq-item:last-child{margin-bottom:0}
+  .faq-item:hover{box-shadow:0 8px 24px rgba(42,36,25,.1);transform:translateY(-3px)}
   .faq-item summary{cursor:pointer;list-style:none;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--gold-deep);display:flex;justify-content:space-between;align-items:center;gap:1rem}
   .faq-item summary::-webkit-details-marker{display:none}
   .faq-item summary::after{content:'+';color:var(--gold-deep);font-size:1.4rem;flex-shrink:0}
   .faq-item[open] summary::after{content:'–'}
   .faq-item p{color:var(--ink-soft);margin-top:1rem;line-height:1.7;font-size:.98rem}
+
+  /* Costuras FAQ -> CTA final -> footer: menos vacío entre bloques */
+  .section-faq{padding-bottom:3rem}
+  #lead-form{padding-top:3rem;padding-bottom:4rem}
+  #lead-form .lead-wa-secondary a{color:var(--gold-bright)}
 
   /* Botones de esta página: mismo texto en todos, en mayúscula, y el de envío centrado */
   .inversion-hero .btn,.mini-cta .btn,.calc-cta .btn,.lead-submit{text-transform:uppercase;letter-spacing:.04em}
@@ -97,15 +105,15 @@
   <div class="section-inner" style="max-width:1080px">
     <h2 class="section-title-center">Por qué invertir en CITY Las Terrenas</h2>
     <div class="inversion-reasons">
-      <div class="inversion-reason">
+      <div class="inversion-reason fade-up">
         <h3>Rentabilidad en USD</h3>
         <p>Rentabilidades netas proyectadas entre el 8% y el 19% anual, con reparto 80% propietario / 20% operador y contabilidad individual por suite.</p>
       </div>
-      <div class="inversion-reason">
+      <div class="inversion-reason fade-up">
         <h3>Ubicación privilegiada</h3>
         <p>Primera línea de playa en Punta Popy, Las Terrenas — una de las zonas de mayor demanda turística y revalorización del Caribe.</p>
       </div>
-      <div class="inversion-reason">
+      <div class="inversion-reason fade-up">
         <h3>Ventajas fiscales</h3>
         <p>Proyecto acogido a la Ley CONFOTUR: exenciones sobre transferencia inmobiliaria, IPI, impuesto sobre la renta e ITBIS del proyecto.</p>
       </div>
@@ -117,7 +125,7 @@
 </section>
 
 <!-- ===== SIMULADOR DE RENTABILIDAD (reutilizado tal cual de la home, CTA apunta al formulario) ===== -->
-<section class="section soft section-calc fade-up visible">
+<section class="section soft section-calc fade-up">
   <div class="section-inner calc-inner">
     <h2 class="section-title-center">Simulador de rentabilidad</h2>
     <div class="calc-grid">
@@ -145,43 +153,43 @@
 </section>
 
 <!-- ===== PREGUNTAS FRECUENTES ===== -->
-<section class="section light">
+<section class="section light section-faq">
   <div class="section-inner" style="max-width:820px">
     <h2 class="section-title-center">Preguntas frecuentes</h2>
     <div class="faq-list">
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Cómo funciona la financiación y el plan de pagos?</summary>
         <p>El pago se reparte en 6 plazos vinculados al avance real de la obra: nada se paga por adelantado sin respaldo. Empieza con un 20% de reserva y termina con la entrega en 2029, todo depositado en notaría desde el primer día.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Tengo que gestionar el alquiler o encargarme de algo una vez comprada la suite?</summary>
         <p>No. El proyecto funciona bajo rental pool con gestión hotelera profesional — la operativa, el mantenimiento y la comercialización turística corren a cargo del operador, no tuyos. Tu papel es el de propietario-inversor: recibes el rendimiento sin intervenir en el día a día, estés donde estés.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Qué ventajas fiscales tiene frente a comprar en España?</summary>
         <p>En España el alquiler turístico tributa cada año por IRPF sin un marco de exención comparable. Aquí, la Ley CONFOTUR concede hasta 15 años de exención fiscal al proyecto, pensada para maximizar lo que te llevas neto desde el primer año.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Es seguro comprar en República Dominicana siendo extranjero?</summary>
         <p>El proceso está blindado por Guzmán Ariza, despacho de referencia en inversión inmobiliaria extranjera del país, que redacta y supervisa el contrato de compraventa. La reserva se deposita en notaría local, y en la entrega recibes un título de propiedad individual a tu nombre con registro catastral — las mismas garantías notariales que si compraras en Europa.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Cuál es la inversión mínima y qué rentabilidad puedo esperar?</summary>
         <p>Desde 195.000 USD por una suite de 50 m². En el escenario base (65% ocupación) la rentabilidad ronda el 12–14% anual, y puede llegar al 18–19% en el escenario optimista. Son cifras proyectadas, no garantizadas.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿En qué moneda se generan los ingresos?</summary>
         <p>En dólares. Al tratarse de un destino con demanda turística europea y norteamericana, el rental pool genera y reparte en USD — una divisa fuerte que diversifica tu exposición si tu patrimonio está mayormente en euros.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Por qué esta zona y por qué ahora?</summary>
         <p>Punta Popy está en uno de los corredores turísticos de mayor expansión del Caribe dominicano: más de un 10% de revalorización histórica anual y ocupaciones que ya superan el 90% en temporada alta. El primer edificio del mismo promotor se vendió al 100% y se entrega este año — City Las Terrenas es la segunda fase, con las condiciones de entrada más tempranas que va a haber.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Es necesario viajar a Las Terrenas para hacer la compra?</summary>
         <p>No. Todo el proceso —firma del contrato, documentación notarial, pagos— se gestiona de forma digital desde tu país de residencia, sin necesidad de desplazamiento físico.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item fade-up">
         <summary>¿Puedo revender la suite antes de que se entregue el edificio?</summary>
         <p>Sí. El contrato permite vender o ceder la unidad en cualquier momento, tanto durante la construcción como una vez en funcionamiento, siempre que los pagos estén al corriente.</p>
       </details>
@@ -193,7 +201,7 @@
 </section>
 
 <!-- ===== FORMULARIO — CTA PRINCIPAL ===== -->
-<section class="section light section-content" id="lead-form">
+<section class="section soft section-content fade-up" id="lead-form">
   <div class="section-inner" style="max-width:640px;text-align:center">
     <h2 class="section-title-center">Descarga el dossier de inversión</h2>
     <p>Déjanos tu email y descarga el dossier al instante — sin compromiso.</p>
@@ -226,7 +234,7 @@
     </div>
 
     <div id="lead-confirm">
-      <p style="font-size:1.2rem;color:var(--gold-deep);font-weight:600">Gracias — descargando tu dossier.</p>
+      <p style="font-size:1.2rem;color:var(--gold-bright);font-weight:600">Gracias — descargando tu dossier.</p>
       <p class="lead-wa-secondary">¿Prefieres ir más rápido? <a href="https://wa.me/34646604591?text=Hola%20Lucho%2C%20acabo%20de%20descargar%20el%20dossier%20de%20inversi%C3%B3n%20de%20City%20Las%20Terrenas%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20directamente." data-wa="lead" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
     </div>
   </div>
