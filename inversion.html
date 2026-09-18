@@ -34,6 +34,7 @@
   @media(max-width:800px){.inversion-reasons{grid-template-columns:1fr}}
 
   .lead-fields{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+  .lead-fields input[name="whatsapp"]{grid-column:1 / -1}
   .lead-fields input,.lead-fields select{font-family:'Inter',sans-serif;font-size:1rem;padding:14px 16px;border:1px solid var(--gold-deep);border-radius:3px;background:#fff;color:var(--ink);width:100%;appearance:none;-webkit-appearance:none}
   .lead-fields select{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath fill='%23a8813f' d='M0 0l7 9 7-9z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
   .lead-fields input:focus,.lead-fields select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,166,104,.15)}
@@ -224,6 +225,7 @@
             <option value="3-6-meses">En 3-6 meses</option>
             <option value="explorando">Explorando opciones</option>
           </select>
+          <input type="tel" name="whatsapp" placeholder="Teléfono (opcional)" autocomplete="tel">
         </div>
         <input type="hidden" name="origen" value="inversion-ads">
         <input type="hidden" name="_subject" value="Nuevo lead — Inversión CITY Las Terrenas">
@@ -398,6 +400,7 @@ document.addEventListener("DOMContentLoaded", function() {
         body: JSON.stringify({
           nombre: data.get('nombre'),
           email: data.get('email'),
+          whatsapp: data.get('whatsapp'),
           listId: 6
         })
       }).catch(function () {});
